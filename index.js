@@ -1,0 +1,1 @@
+const fs=require("node:fs"),file=process.argv[2];if(!file){console.error("Usage: node index.js file.csv");process.exit(1)}const line=fs.readFileSync(file,"utf8").split(/\r?\n/,1)[0]||"";line.split(",").forEach((x,i)=>console.log(`${i+1}. ${x.trim()}`))
